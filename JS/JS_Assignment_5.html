@@ -1,0 +1,101 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <div>
+            <label> Array data</label><p>[12, 345, 4, 546, 122, 84, 98, 64, 9, 1, 3223, 455, 23, 234, 213]</p>
+            <br>
+<button  onclick="bubbleSort()">BubbleSort</button>
+<button  onclick="selectionSort()">selectionSort</button>
+
+</div>
+<div>
+    <p id="demo"></p>
+</div>
+        <script>
+            var arr=[12, 345, 4, 546, 122, 84, 98, 64, 9, 1, 3223, 455, 23, 234, 213];
+
+            function bubbleSort(){
+
+   var len = arr.length;
+
+   for (var i = len-1; i>=0; i--){
+
+     for(var j = 1; j<=i; j++){
+
+       if(arr[j-1]>arr[j]){
+
+           var temp = arr[j-1];
+
+           arr[j-1] = arr[j];
+
+           arr[j] = temp;
+
+        }
+
+     }
+
+   }
+
+    var  text, i;
+
+text = "<ul>";
+ text += "<li>bubble sort</li>";
+for (i = 0; i < len; i++) {
+    text += "<li>" + arr[i] + "</li>";
+}
+text += "</ul>";
+        document.getElementById("demo").innerHTML = text;
+
+}
+
+
+
+
+
+function selectionSort(){
+
+  var minIdx, temp, 
+
+      len = arr.length;
+
+  for(var i = 0; i < len; i++){
+
+    minIdx = i;
+
+    for(var  j = i+1; j<len; j++){
+
+       if(arr[j]<arr[minIdx]){
+
+          minIdx = j;
+
+       }
+
+    }
+
+    temp = arr[i];
+
+    arr[i] = arr[minIdx];
+
+    arr[minIdx] = temp;
+
+  }
+
+  var  text, i;
+
+text = "<ul>";
+  text += "<li>selection sort</li>";
+for (i = 0; i < len; i++) {
+    text += "<li>" + arr[i] + "</li>";
+}
+text += "</ul>";
+        document.getElementById("demo").innerHTML = text;
+}
+
+
+
+
+            </script>
+        </body>
+    </html>
+

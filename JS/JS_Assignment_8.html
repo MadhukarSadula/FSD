@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+<style>  
+</style>
+</head>
+<body>
+<div>
+  <label>DropDown box</label><select id="mySelect">
+    <option>1</option>
+     <option>2</option>
+      <option>3</option>
+       <option>4</option>
+  </select>
+  <br>
+    <button onclick="getOptions()" >Show in alert</button>
+    </div>
+<script>
+function getOptions()
+{
+var x=document.getElementById("mySelect");
+var txt1 = "No. of items : ";
+var i;
+l=document.getElementById("mySelect").length;  
+txt1 = txt1+l;
+for (i=0;i<x.length;i++)
+  {
+    txt1 = txt1 + "\n" + x.options[i].text;
+  }
+alert(txt1);
+}
+</script>
+</body>
+</html>

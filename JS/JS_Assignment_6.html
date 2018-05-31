@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<img src="google.png" onclick="openWin()" style="height:250px;width:400px;"/><br>
+<button onclick="closeWin()">Close new Window</button>
+
+<script>
+var myWindow;
+
+function openWin() {
+    myWindow = window.open("https://www.google.com/", "myWindow");
+   
+}
+
+function closeWin() {
+    myWindow.close();
+}
+</script>
+
+</body>
+</html>
