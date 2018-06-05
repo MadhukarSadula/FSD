@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body>
+
+<div ng-app="myApp">
+<div>
+  <label>User Name :</label> <input type="text" ng-model="Uname">
+  <label>City Name : </label><input type="text" ng-model="Cname">
+  </div>
+<div ng-controller="myCtrl">
+   <label>User name:</label>{{ Uname| uppercase }}
+   <br>
+   <label>City name:</label>{{ Cname| uppercase }}
+ <br>
+ <label>Date:</label>{{today | date}}
+</div>
+<script>
+
+var app = angular.module("myApp", []);
+
+app.controller("myCtrl", function($scope) {
+    $scope.today = new Date();
+  
+});
+</script>
+</div>
+
+
+
+</body>
+</html>

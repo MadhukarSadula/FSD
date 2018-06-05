@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+<style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+</style>
+<body ng-app="myApp">
+
+<br>
+<ul>
+  <li><a href="#/!">Main</a></li>
+  <li><a href="#!allcds1">View all CDs</a></li>
+  <li><a href="#!newcds1">New CDs</a></li>
+ 
+</ul>
+
+<div ng-view></div>
+
+<script>
+var app = angular.module("myApp", ["ngRoute"]);
+app.config(function($routeProvider) {
+    $routeProvider
+    .when("/", {
+        templateUrl : "Angular_7.html",
+         controller : "CDCtrl"
+    })
+    .when("/allcds1", {
+        templateUrl : "allcds.html",
+         controller : "CDCtrl1"
+    })
+    .when("/newcds1", {
+        templateUrl : "newcds.html",
+         controller : "CDCtrl2"
+    });
+   
+});
+app.controller('CDCtrl', function($scope) {
+    $scope.CDparlorname="Maddy's Coffer Day";
+    $scope.HomeOfficeaddress="Manikonda,Hyderbad,India";
+    $scope.details = [
+        {title:'Title1',language:'English',price:24},
+        {title:'Title1',language:'Hindi',price:25},
+        {title:'Title1',language:'Telugu',price:26},
+         {title:'Title1',language:'Tamil',price:27},
+         {title:'Title1',language:'Kannada',price:28}
+    ];
+});
+app.controller('CDCtrl1', function($scope) {
+    
+    $scope.details2 = [
+        {title:'Titleold1',language:'English',price:24},
+        {title:'Titleold2',language:'Hindi',price:25},
+        {title:'Titleold3',language:'Telugu',price:26},
+         {title:'Titleold4',language:'Tamil',price:27},
+         {title:'Titleold5',language:'Kannada',price:28},
+          {title:'Titlenew2',language:'English',price:24},
+        {title:'Titlenew3',language:'Hindi',price:25},
+        {title:'Titlenew4',language:'Telugu',price:26},
+         {title:'Titlenew5',language:'Tamil',price:27},
+         {title:'Titlenew6',language:'Kannada',price:28}
+    ];
+});
+app.controller('CDCtrl2', function($scope) {
+
+    $scope.details3 = [
+           {title:'Titlenew2',language:'English',price:24},
+        {title:'Titlenew3',language:'Hindi',price:25},
+        {title:'Titlenew4',language:'Telugu',price:26},
+         {title:'Titlenew5',language:'Tamil',price:27},
+         {title:'Titlenew6',language:'Kannada',price:28}
+    ];
+});
+</script>
+<p>If data is not displaying ,please open Routing.html in internet Explorer</p>
+</body>
+</html>

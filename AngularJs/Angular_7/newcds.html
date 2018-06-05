@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <style>
+table  {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table td, tableth {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+table tr:nth-child(even){background-color: #f2f2f2;}
+
+table tr:hover {background-color: #ddd;}
+
+table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+<body>
+
+
+<div ng-app="myApp" ng-controller="CDCtrl2">
+   
+ <h2>New Cds</h2><table>
+    <tr>
+        <th>Title</th>
+           <th>Language</th>
+           <th>Price</th>
+        </tr>
+ <tr ng-repeat="x in details3">
+    <td>{{ x.title }}</td>
+    <td>{{ x.language }}</td>
+      <td>{{ x.price }}</td>
+  </tr>
+</table>
+
+</div>
+
+
+
+</body>
+</html>
