@@ -1,14 +1,88 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<style>
+*{
+    box-sizing: border-box;
+}
+.container1 {
+    border-radius: 5px;
+    background-color:dimgray;
+    padding: 20px;
+width:100%;
+height:20%;
+border-bottom-color:blue;
+}
+h2{
+text-align: center;
+}
+.container1 img{
+height:100%;
+width:15%;
+
+float:left;
+}
+.container1 h2{
+font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+font-size: 35px;
+
+
+text-align: center;
+}
+
+input[type=text],input[type=email],input[type=number], select, textarea {
+    width:50%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+         width:20%;
+         height:10%;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.container2 {
+    border-radius: 5px;
+    background-color:aquamarine;
+    padding: 20px;
+width:60%;
+height:75%;
+margin-top: 20px;
+position: absolute;
+left:20%;
+
+}
+
+
+
+</style>
 <body>
 
 <div ng-app="myApp">
-<div>
+<div class="container1">
   <label>User Name :</label> <input type="text" ng-model="Uname">
+  <br>
+  <br>
   <label>City Name : </label><input type="text" ng-model="Cname">
   </div>
-<div ng-controller="myCtrl">
+<div ng-controller="myCtrl" class="container2" >
    <label>User name:</label>{{ Uname| uppercase }}
    <br>
    <label>City name:</label>{{ Cname| uppercase }}
