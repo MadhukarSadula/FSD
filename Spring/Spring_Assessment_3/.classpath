@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="lib" path="lib/aws-java-sdk-core-1.11.49.jar"/>
+	<classpathentry kind="lib" path="lib/aws-java-sdk-kms-1.11.49.jar"/>
+	<classpathentry kind="lib" path="lib/aws-java-sdk-s3-1.11.49.jar"/>
+	<classpathentry kind="lib" path="lib/bcpkix-jdk15on-1.54.jar"/>
+	<classpathentry kind="lib" path="lib/bcprov-jdk15on-1.54.jar"/>
+	<classpathentry kind="lib" path="lib/com.springsource.org.apache.catalina-7.0.82.A.RELEASE.jar"/>
+	<classpathentry kind="lib" path="lib/com.springsource.org.apache.coyote-7.0.82.A.RELEASE.jar"/>
+	<classpathentry kind="lib" path="lib/com.springsource.org.apache.juli-7.0.82.A.RELEASE.jar"/>
+	<classpathentry kind="lib" path="lib/com.springsource.org.apache.tomcat-7.0.82.A.RELEASE.jar"/>
+	<classpathentry kind="lib" path="lib/com.springsource.org.apache.tomcat.util-7.0.82.A.RELEASE.jar"/>
+	<classpathentry kind="lib" path="lib/commons-cli-1.3.1.jar"/>
+	<classpathentry kind="lib" path="lib/commons-codec-1.9.jar"/>
+	<classpathentry kind="lib" path="lib/commons-configuration-1.10.jar"/>
+	<classpathentry kind="lib" path="lib/commons-lang-2.6.jar"/>
+	<classpathentry kind="lib" path="lib/commons-lang3-3.4.jar"/>
+	<classpathentry kind="lib" path="lib/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="lib/httpclient-4.5.2.jar"/>
+	<classpathentry kind="lib" path="lib/httpcore-4.4.4.jar"/>
+	<classpathentry kind="lib" path="lib/ion-java-1.0.1.jar"/>
+	<classpathentry kind="lib" path="lib/jackson-annotations-2.6.0.jar"/>
+	<classpathentry kind="lib" path="lib/jackson-core-2.6.6.jar"/>
+	<classpathentry kind="lib" path="lib/jackson-databind-2.6.6.jar"/>
+	<classpathentry kind="lib" path="lib/jackson-dataformat-cbor-2.6.6.jar"/>
+	<classpathentry kind="lib" path="lib/jasypt-1.9.2.jar"/>
+	<classpathentry kind="lib" path="lib/jmespath-java-1.0.jar"/>
+	<classpathentry kind="lib" path="lib/joda-time-2.8.1.jar"/>
+	<classpathentry kind="lib" path="lib/tc-runtime-instance-3.2.8.RELEASE.jar"/>
+	<classpathentry kind="lib" path="lib/tc-runtime-security-3.2.8.RELEASE.jar"/>
+	<classpathentry kind="lib" path="lib/tc-runtime-util-3.2.8.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/Spring/sts-bundle/sts-3.9.1.RELEASE/plugins/org.aspectj.ajde_1.8.10.201710051806.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
