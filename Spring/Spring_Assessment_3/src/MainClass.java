@@ -19,22 +19,14 @@ public class MainClass {
     	 liststudent.add(obj);
     	 
      }
-     
-     mainobj.getAllDetails(liststudent);
+
+         ApplicationContext context = new ClassPathXmlApplicationContext(
+                         "applicationContext.xml");
+         MethodsExecution bc = (MethodsExecution) context.getBean("Methods");
+         
+    bc.getAllDetails(liststudent);
+    bc.StudentSearch(liststudent, "STD003");
      
 	}
- public  void	getAllDetails(ArrayList<Student> students)
- { int i=0;
-	 for(Student std:students)
-	 { i++;
-		System.out.println("Student :"+i); 
-		System.out.println("ID :"+std.getStudentId()); 
-		System.out.println("Name :"+std.getStudentName()); 
-		System.out.println("Address :"+std.getStudentAddress()); 
-	 }
- }
- public  void	StudentSearch(ArrayList<Student> students,String id)
- {
-	 
- }
+ 
 }
