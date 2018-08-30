@@ -12,10 +12,10 @@ public class StudentJDBCTemplate implements StudentDAO {
       this.dataSource = dataSource;
       this.jdbcTemplateObject = new JdbcTemplate(dataSource);
    }
-   public void create(String name, Integer age) {
+   public void create(String name, String address) {
       String SQL = "insert into Student (name, address) values (?, ?)";
       jdbcTemplateObject.update( SQL, name, address);
-      System.out.println("Created Record Name = " + name + " Address = " + age);
+      System.out.println("Created Record Name = " + name + " Address = " + address);
       return;
    }
    public Student getStudent(Integer id) {

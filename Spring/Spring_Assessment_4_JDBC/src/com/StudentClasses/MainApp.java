@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import com.tutorialspoint.StudentJDBCTemplate;
+import com.StudentClasses.StudentJDBCTemplate;
 
 public class MainApp {
    public static void main(String[] args) {
@@ -14,17 +14,17 @@ public class MainApp {
          (StudentJDBCTemplate)context.getBean("studentJDBCTemplate");
       
       System.out.println("------Records Creation--------" );
-      studentJDBCTemplate.create("Zara", 11);
-      studentJDBCTemplate.create("Nuha", 2);
-      studentJDBCTemplate.create("Ayan", 15);
+      studentJDBCTemplate.create("Zara", "Hyd1");
+      studentJDBCTemplate.create("Nuha", "Hyd11");
+      studentJDBCTemplate.create("Ayan", "Hyd111");
 
       System.out.println("------Listing Multiple Records--------" );
       List<Student> students = studentJDBCTemplate.listStudents();
       
       for (Student record : students) {
-         System.out.print("ID : " + record.getId() );
-         System.out.print(", Name : " + record.getName() );
-         System.out.println(", Age : " + record.getAge());
+         System.out.print("ID : " + record.getStudentId() );
+         System.out.print(", Name : " + record.getStudentName() );
+         System.out.println(", Age : " + record.getStudentAddress());
       }
 
       

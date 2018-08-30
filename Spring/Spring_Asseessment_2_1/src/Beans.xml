@@ -1,0 +1,22 @@
+?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+   <!-- Definition for textEditor bean -->
+   <bean id = "student" class = "com.DIandIOC.Student">
+     <property name = "studentId"/>
+     <property name = "studentName" />
+      <property name = "test" ref = "testcls"/>
+   </bean>
+
+   <!-- Definition for spellChecker bean -->
+   <bean id = "testcls" class = "com.DIandIOC.Test">
+   <property name = "testId"/>
+   <property name = "testTitle"/>
+   <property name = "testMarks"/>
+   </bean>
+
+</beans>
